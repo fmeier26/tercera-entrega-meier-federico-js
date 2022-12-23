@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+#contenedorProductos, .flex {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 5px;
+    padding-top: 5px;
+    object-fit: cover;
+    vertical-align: middle;
+    gap: 12px;
+
+    
+    
+}
+
+#buscador {
+    padding-left: 5px;
+}
+
+#comprar {
+    color: red;
+}
+
+
+.flex p {
+    margin: 0 3px;
+}
+
+#contenedorCarro {
+    width: 400px;
+    min-height: 200px;
+    border: 2px black solid;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    
+}
+.producto {
+    width: 200px;
+    height: 300px;
+    border: green solid 2px;
+    margin-bottom: 5px;
+
+}
+
+.foto {
+    height: 200px;
+    width: 200px;
+    padding-left: 5px;
+}
+.producto img {
+    width: 150px;
+    height: 150px;
+}
+
+.contenedor {
+    border: 1px solid red;
+}
+.logo {
+    width: 20%;
+    height: 20%;
+    padding: 10px;
+    margin-left: 39%;
+    
+   
+}
+
+.footer {
+    border: 1px solid black;
+    margin-top: 10rem;
+    
+}
+
+
+.listaNav {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.containerNav {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+        border: 1px solid black;
+    
+    
+}
+
+.listaNav li {
+    margin: 10px;
+    padding: 40px;
+    text-align: center;
+    
+}
+
+.header {
+    background-color: rgb(221, 125, 141);
+    border: 1px solid black;
+    text-align: center;
+
+    
+}
+
+.h2 {
+    padding-left: 430px;
+}
