@@ -1,11 +1,12 @@
-
 let productos = [
     { id: 1, nombre: "Torta Customizada", precio: 5000, categoria: "Pasteleria Creativa", img: "./img/XXX/20201214_094515.jpg" },
     { id: 2, nombre: "Papa Noel", precio: 11000, categoria: "Navidad", img: "./img/XXX/20201224_120128.jpg"},
     { id: 3, nombre: "Baby Shark", precio: 15000, categoria: "Cumpleaños", img: "./img/XXX/IMG_20210417_134112_340.jpg"},
     { id: 4, nombre: "Viajes", precio: 7500, categoria: "Cumpleaños", img: "./img/XXX/PSX_20210501_121026.jpg"},
     { id: 5, nombre: "Rey Leon", precio: 6000, categoria: "Pasteleria Creativa", img: "./img/XXX/PSX_20210705_094047.jpg"},
-    { id: 6, nombre: "Osito", precio: 4000, categoria: "Pasteleria Creativa", img: "./img/XXX/PSX_20211122_203518.jpg"}
+    { id: 6, nombre: "Osito", precio: 4000, categoria: "Pasteleria Creativa", img: "./img/XXX/PSX_20211122_203518.jpg"},
+    { id: 7, nombre: "Rey de copas", precio: 14000, categoria: "Pasteleria Creativa", img: "./img/XXX/20201225_184445.jpg"},
+    { id: 8, nombre: "Cheesecake", precio: 24000, categoria: "Pasteleria Creativa", img: "./img/XXX/PSX_20210526_132947.jpg"},
 ]
 
 let contenedorCarrito = document.getElementById("contenedorCarro")
@@ -25,18 +26,24 @@ function renderizarProductosFiltrados(e) {
     
 }
 
-
 function renderizarProductos(array) {
     contenedor.innerHTML= ""
     for (const producto of array) {
         let tarjetaProducto = document.createElement("div")
-        tarjetaProducto.className = "producto"
+        tarjetaProducto.className = "col-lg-3"
         tarjetaProducto.id = producto.id
            tarjetaProducto.innerHTML = `
-            <h3>${producto.nombre}</h3>
-            <p>Cuesta $${producto.precio}</p>
-            <img class="imagenes" src=${producto.img}>
-            <button class="boton" id=${producto.id}>Añadir al carrito</button>
+           <div class="row">
+                <div class="col-sm">
+                    <div class="card" style="width: 16rem;">
+                    <img class="card-img-top" src="${producto.img}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">${producto.nombre}</h5>
+                    <p class="card-text">Cuesta $${producto.precio}</p>
+                    <button class="boton" id=${producto.id}>Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
 
         `
     
