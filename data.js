@@ -62,7 +62,7 @@ function agregarAlCarro(e) {
     let productoBuscado = productos.find(producto=> producto.id == e.target.id)
     let posicionDelProductoBuscado = carro.findIndex(producto=> producto.id == productoBuscado.id)
     if (posicionDelProductoBuscado != -1) {
-        carro[posicionDelProductoBuscado].unidades++
+        carro[posicionDelProductoBuscado].unidades++ 
         carro[posicionDelProductoBuscado].subtotal = carro[posicionDelProductoBuscado].unidades * carro[posicionDelProductoBuscado].precioUnitario       
     } else {
     carro.push({id: productoBuscado.id, nombre: productoBuscado.nombre, precioUnitario: productoBuscado.precio, unidades: 1, subtotal: productoBuscado.precio })
@@ -78,16 +78,19 @@ function renderizarCarro(infoDeProductos) {
     for (const producto of infoDeProductos) {
         contenedorCarrito.innerHTML += `
         <div class="flex">
-        <p>${producto.nombre}</p>
-        <p>${producto.precioUnitario}</p>
-        <p>${producto.unidades}</p>
-        <p>${producto.subtotal}</p>
+        <p>${producto.nombre} (nombre torta)</p>
+        <p>${producto.precioUnitario} pesos argentinos</p>
+        <p>${producto.unidades} unidades</p>
+        <p>Subtotal ${producto.subtotal} pesos argentinos </p>
+        
         </div>
-         
+       
         `
+       
         
     }
-
+    
+  
     let totalDeLaCompra = carro.reduce((acc, valorActual) =>acc + valorActual.subtotal, 0)
     contenedorCarrito.innerHTML += `
     <h3>TOTAL $${totalDeLaCompra}</h3>
